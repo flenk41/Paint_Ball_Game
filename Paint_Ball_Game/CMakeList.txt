@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.10)
+project(Paint_Bolls_Game)
+
+set(CMAKE_CXX_STANDARD 17)
+
+set(SOURCES
+	Paint_Bolls_Game/main.cpp
+	Paint_Bolls_Game/Player.cpp
+	Paint_Bolls_Game/Ball.cpp
+)
+
+set(HEADERS
+	Paint_Bolls_Game/Player.h
+	Paint_Bolls_Game/Ball.h
+)
+
+add_executable(Paint_Bolls_Game ${SOURCE} ${HEADERS})
+
+find_package(raylib REQUIRED)
+
+target_link_libraries(Paint_Bolls_Game PRIVATE raylib)
+
+set(raylib_DIR )
